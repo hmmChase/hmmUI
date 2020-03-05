@@ -1,0 +1,17 @@
+{
+  "npmClient": "npm",
+  "version": "independent",
+  "packages": [
+    "libraries/**/*"
+  ],
+  "registry": "https://registry.npmjs.org/",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "*.md",
+        "tests/*",
+        "ignored-files"
+      ]
+    }
+  }
+}
