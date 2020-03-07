@@ -10,7 +10,8 @@
     "clean": "lerna exec npm run \"clean\"",
     "publish": "lerna publish",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "antd": "^4.0.1",
