@@ -20,11 +20,13 @@ module.exports = {
       //   test: /\.less$/,
       //   use: [
       //     { loader: 'style-loader' },
-      //     { loader: 'css-loader' }
-      //     // {
-      //     // loader: 'less-loader'
-      //     // options: { javascriptEnabled: true, modifyVars: themeVars }
-      //     // }
+      //     {
+      //       loader: 'css-loader' // translates CSS into CommonJS
+      //     },
+      //     {
+      //       loader: 'less-loader', // compiles Less to CSS
+      //       options: { modifyVars: themeVars, javascriptEnabled: true }
+      //     }
       //   ]
       //   // include: [
       //   //   path.resolve(__dirname, '../src'),

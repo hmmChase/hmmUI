@@ -10,25 +10,26 @@
 // );
 
 module.exports = {
-  // presets: [
-  //   {
-  //     name: 'storybook-addon-deps/preset',
-  //     options: { exclude: /^@babel/ }
-  //   }
-  // ],
+  presets: [
+    {
+      name: 'storybook-addon-deps/preset',
+      options: { exclude: /^@babel/ }
+    }
+  ],
 
   stories: [
     '../libraries/**/**/*.stories.js',
-    '../libraries/**/**/*.stories.mdx'
+    '../libraries/**/**/*.stories.mdx',
+    '../components/**/**/**/*.stories.js',
+    '../components/**/**/**/*.stories.mdx'
   ],
 
   addons: [
     // '@storybook/addon-a11y',
     // '@storybook/addon-actions',
-    // '@storybook/addon-docs',
     // '@storybook/addon-backgrounds',
-    // '@storybook/addon-docs',
-    // '@storybook/addon-knobs',
+    '@storybook/addon-docs',
+    '@storybook/addon-knobs'
     // '@storybook/addon-links',
     // '@storybook/addon-storysource',
     // '@storybook/addon-viewport'
