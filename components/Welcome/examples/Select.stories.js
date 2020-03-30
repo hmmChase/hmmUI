@@ -6,7 +6,7 @@ import { Select } from './Select';
 const onChange = action('change');
 
 export default {
-  title: 'Welcome/Design System/forms/Select',
+  title: 'components|Welcome/Design System/forms/Select',
   component: Select
 };
 

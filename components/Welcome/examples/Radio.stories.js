@@ -6,7 +6,7 @@ import { Radio } from './Radio';
 const onChange = action('change');
 
 export default {
-  title: 'Welcome/Design System/forms/Radio',
+  title: 'components|Welcome/Design System/forms/Radio',
   component: Radio
 };
 

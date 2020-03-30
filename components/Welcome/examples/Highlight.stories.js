@@ -71,7 +71,7 @@ jobs:
 const yamlCodeWithWrappers = `<pre class="language-yaml"><code class="language-yaml">${yamlCode}</code></pre>`;
 
 export default {
-  title: 'Welcome/Design System/Highlight',
+  title: 'components|Welcome/Design System/Highlight',
   component: Highlight
 };
 

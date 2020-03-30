@@ -4,7 +4,7 @@ import WithTooltip from './WithTooltip';
 import { TooltipMessage } from './TooltipMessage';
 
 export default {
-  title: 'Welcome/Design System/tooltip/TooltipMessage',
+  title: 'components|Welcome/Design System/tooltip/TooltipMessage',
 
   decorators: [
     storyFn => (

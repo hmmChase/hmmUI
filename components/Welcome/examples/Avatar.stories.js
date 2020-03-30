@@ -2,7 +2,7 @@ import React from 'react';
 import allCombos from '../../../.storybook/allCombos';
 import Avatar from './Avatar';
 
-export default { title: 'Welcome/Design System/Avatar', component: Avatar };
+export default { title: 'components|Welcome/Design System/Avatar', component: Avatar };
 
 const props = {
   loading: [true, false],

@@ -4,7 +4,7 @@ import { Welcome } from '@storybook/react/demo';
 import { Emoji } from './1-Button.stories';
 
 export default {
-  title: 'Welcome',
+  title: 'components|Welcome',
   // name: 'to Storybook',
   component: Welcome
 };

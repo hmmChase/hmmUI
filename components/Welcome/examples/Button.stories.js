@@ -19,7 +19,7 @@ function ButtonWrapper(props) {
 }
 
 export default {
-  title: 'Welcome/Design System/Button',
+  title: 'components|Welcome/Design System/Button',
   component: Button
 };
 

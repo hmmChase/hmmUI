@@ -5,7 +5,7 @@ import { AvatarList } from './AvatarList';
 import Avatar from './Avatar';
 
 export default {
-  title: 'Welcome/Design System/AvatarList',
+  title: 'components|Welcome/Design System/AvatarList',
   component: AvatarList,
   parameters: {
     subcomponents: { Avatar }

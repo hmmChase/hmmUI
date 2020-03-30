@@ -4,7 +4,7 @@ import { PureTaskList } from './TaskList';
 import { taskData, actionsData } from './Task.stories';
 
 export default {
-  title: 'Welcome/Design System/TaskList',
+  title: 'components|Welcome/Design System/TaskList',
   component: PureTaskList,
   excludeStories: /.*Data$/
 };

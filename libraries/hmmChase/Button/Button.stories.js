@@ -1,7 +1,7 @@
 import allCombos from '../../../.storybook/allCombos';
 import { Button } from './Button';
 
-export default { title: 'hmmChase', component: Button };
+export default { title: 'libraries|hmmChase', component: Button };
 
 const data = {
   children: ['', 'click me'],

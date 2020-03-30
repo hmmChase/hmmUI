@@ -50,7 +50,7 @@ Tooltip.defaultProps = {
 };
 
 export default {
-  title: 'Welcome/Design System/tooltip/WithTooltip',
+  title: 'components|Welcome/Design System/tooltip/WithTooltip',
 
   decorators: [
     storyFn => (

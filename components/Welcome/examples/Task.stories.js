@@ -5,7 +5,7 @@ import Task from './Task';
 
 // declare component
 export default {
-  title: 'Welcome/Design System/Task',
+  title: 'components|Welcome/Design System/Task',
   component: Task,
   excludeStories: /.*Data$/
 };

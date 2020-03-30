@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 import { StoryLinkWrapper } from '../StoryLinkWrapper';
 
 export default {
-  title: 'Welcome/Design System/tooltip/ListItem',
+  title: 'components|Welcome/Design System/tooltip/ListItem',
 
   decorators: [
     storyFn => (
