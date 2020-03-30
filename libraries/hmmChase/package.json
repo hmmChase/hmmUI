@@ -1,7 +1,7 @@
 {
   "name": "@hmmui/hmmchase",
   "description": "hmmchase",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "ISC",
   "author": "hmmChase",
   "main": "dist/index.js",
