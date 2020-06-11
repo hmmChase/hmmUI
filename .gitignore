@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Logs
 logs
 *.log
@@ -77,6 +79,8 @@ typings/
 
 # Next.js build output
 .next
+/.next/
+/out/
 
 # Nuxt.js build / generate output
 .nuxt
@@ -104,8 +108,10 @@ dist
 .tern-port
 
 # Other
-.vscode
-.history
-bundles
 build
 dist
+bundles
+
+.vscode
+.history
+.now
