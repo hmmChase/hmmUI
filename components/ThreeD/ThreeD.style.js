@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ThreeDee = styled.div`
+export const ThreeD = styled.div`
   /* body { */
   /* background: #edf2f4; */
   perspective: 1000px;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as sc from './ThreeDee.style';
+import * as sc from './ThreeD.style';
 
 const useMove = () => {
   const [state, setState] = useState({ x: 0, y: 0 });
@@ -21,11 +21,11 @@ const useMove = () => {
   };
 };
 
-const ThreeDee = () => {
+const ThreeD = () => {
   const { x, y, handleMouseMove } = useMove();
 
   return (
-    <sc.ThreeDee onMouseMove={handleMouseMove}>
+    <sc.ThreeD onMouseMove={handleMouseMove}>
       <div
         className='card'
         style={{
@@ -54,8 +54,8 @@ const ThreeDee = () => {
           </p>
         </div>
       </div>
-    </sc.ThreeDee>
+    </sc.ThreeD>
   );
 };
 
-export default ThreeDee;
+export default ThreeD;
