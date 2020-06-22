@@ -12,10 +12,10 @@
 module.exports = {
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+      // {
+      //   test: /\.css$/,
+      //   use: ['style-loader', 'css-loader']
+      // }
       // {
       //   test: /\.less$/,
       //   use: [
@@ -33,6 +33,42 @@ module.exports = {
       //   //   /[\/]node_modules[\/].*antd/
       //   // ]
       // }
-    ]
-  }
+
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader'],
+      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env', '@babel/preset-react'],
+      //       plugins: [
+      //         [
+      //           'babel-plugin-styled-components',
+      //           {
+      //             ssr: true,
+      //             displayName: true,
+      //             preprocess: false,
+      //             minify: true,
+      //             pure: true,
+      //             transpileTemplateLiterals: true,
+      //           },
+      //         ],
+      //       ],
+      //     },
+      //   },
+      // },
+      {
+        test: /\.(svg|ico|jpe?g|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+
+        // test: /\.(png|jpe?g|svg|gif)$/,
+        exclude: /node_modules/,
+        use: [{ loader: 'file-loader' }],
+      },
+    ],
+  },
 };

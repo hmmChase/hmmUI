@@ -1,4 +1,4 @@
-const autoprefixer = require('autoprefixer');
+// const autoprefixer = require('autoprefixer');
 const pkg = require('./package.json');
 const aliases = require('./aliases');
 
@@ -11,11 +11,11 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: { plugins: [autoprefixer({ grid: 'autoplace' })] }
-          }
-        ]
+          // {
+          //   loader: 'postcss-loader',
+          //   options: { plugins: [autoprefixer({ grid: 'autoplace' })] },
+          // },
+        ],
       },
       {
         test: /\.(js|jsx)$/,
@@ -33,14 +33,24 @@ module.exports = {
                   preprocess: false,
                   minify: true,
                   pure: true,
-                  transpileTemplateLiterals: true
-                }
-              ]
-            ]
-          }
-        }
-      }
-    ]
+                  transpileTemplateLiterals: true,
+                },
+              ],
+            ],
+          },
+        },
+      },
+      {
+        test: /\.(png|jpe?g|svg|gif)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            // options: { name: 'images/[hash]-[name].[ext]' },
+          },
+        ],
+      },
+    ],
   },
   // component source
   entry: './index.js',
@@ -50,6 +60,6 @@ module.exports = {
   resolve: {
     alias: aliases,
     extensions: ['.js', '.jsx', '.json'],
-    modules: ['node_modules']
-  }
+    modules: ['node_modules'],
+  },
 };
