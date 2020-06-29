@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const button = styled.a`
+export const projectLink = styled.a`
   background-color: #c4eada;
   cursor: pointer;
   display: inline-block;

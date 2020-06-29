@@ -1,2 +1,4 @@
 *.stories.js
 *.log
+.vscode
+.history

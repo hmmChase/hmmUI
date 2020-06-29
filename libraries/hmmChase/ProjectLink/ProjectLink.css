@@ -1,4 +1,4 @@
-.button {
+.projectLink {
   display: inline-block;
   padding: 10px;
   border: none;
@@ -8,15 +8,16 @@
   cursor: pointer;
   background-color: #c4eada;
   outline: none;
+  user-select: none;
 }
 
-.button:hover {
+.projectLink:hover {
   box-shadow: 4px 4px 0 0 #ef7b7b;
   transform: translateY(-1px) translateX(-1px);
   transition: all 200ms ease;
 }
 
-.button:active {
+.projectLink:active {
   border-radius: 10px 0 10px 0;
   background-color: #ef7b7b;
   box-shadow: -4px -4px 0 0 #c4eada;
