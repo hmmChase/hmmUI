@@ -5,7 +5,7 @@ import './ProjectLink.css';
 
 const ProjectLink = (props) => (
   <a
-    className='projectLink'
+    className='project-link'
     href={props.href}
     target='_blank'
     rel='noopener noreferrer'

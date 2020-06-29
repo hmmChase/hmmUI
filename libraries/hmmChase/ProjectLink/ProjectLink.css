@@ -1,4 +1,4 @@
-.projectLink {
+.project-link {
   display: inline-block;
   padding: 10px;
   border: none;
@@ -11,13 +11,13 @@
   user-select: none;
 }
 
-.projectLink:hover {
+.project-link:hover {
   box-shadow: 4px 4px 0 0 #ef7b7b;
   transform: translateY(-1px) translateX(-1px);
   transition: all 200ms ease;
 }
 
-.projectLink:active {
+.project-link:active {
   border-radius: 10px 0 10px 0;
   background-color: #ef7b7b;
   box-shadow: -4px -4px 0 0 #c4eada;
