@@ -1,30 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-/*
-
-align-content
-
-Aligns a flex container's lines within when there is extra space in the cross-axis
-Similar to how justify-content aligns individual items within the main-axis
-Determines how to account for extra space in the cross-axis
-
-stretch - Lines stretch to take up the remaining space (default)
-flex-start - Lines packed to the start of the container
-flex-end - Lines packed to the end of the container
-center - Lines packed to the center of the container
-space-between - Lines evenly distributed; the first line is at the start of the container while the last one is at the end
-space-around - Lines evenly distributed with equal space around each line
-
-*/
-
 const AlignContent = () => (
   <>
-    <h2>flex-direction: row</h2>
+    <h2>
+      Aligns a flex container's lines within when there is extra space in the
+      cross-axis
+    </h2>
+    <h3>
+      Similar to how justify-content aligns individual items within the
+      main-axis
+    </h3>
+    <h3>Determines how to account for extra space in the cross-axis</h3>
+    <h3>
+      It only applies if flex-wrap: wrap is present, and if there are multiple
+      lines of flexbox/grid items
+    </h3>
 
-    <h6>stretch</h6>
+    <Code>flex-direction: row</Code>
+    <Code>flex-wrap: wrap</Code>
 
-    <Container style={{ alignContent: 'stretch' }}>
+    <Heading>stretch</Heading>
+
+    <Desc> - Lines stretch to take up the remaining space (default)</Desc>
+
+    <Container style={{ alignContent: 'stretch', flexWrap: 'wrap' }}>
       <P style={{ backgroundColor: 'yellow' }}>1</P>
       <P style={{ backgroundColor: 'yellow' }}>2</P>
       <P style={{ backgroundColor: 'yellow' }}>3</P>
@@ -35,9 +35,11 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'yellow' }}>8</P>
     </Container>
 
-    <h6>flex-start</h6>
+    <Heading>flex-start</Heading>
 
-    <Container style={{ alignContent: 'flex-start' }}>
+    <Desc> - Lines packed to the start of the container</Desc>
+
+    <Container style={{ alignContent: 'flex-start', flexWrap: 'wrap' }}>
       <P style={{ backgroundColor: 'red' }}>1</P>
       <P style={{ backgroundColor: 'red' }}>2</P>
       <P style={{ backgroundColor: 'red' }}>3</P>
@@ -48,22 +50,11 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'red' }}>8</P>
     </Container>
 
-    <h6>flex-end</h6>
+    <Heading>center</Heading>
 
-    <Container style={{ alignContent: 'flex-end' }}>
-      <P style={{ backgroundColor: 'green' }}>1</P>
-      <P style={{ backgroundColor: 'green' }}>2</P>
-      <P style={{ backgroundColor: 'green' }}>3</P>
-      <P style={{ backgroundColor: 'green' }}>4</P>
-      <P style={{ backgroundColor: 'green' }}>5</P>
-      <P style={{ backgroundColor: 'green' }}>6</P>
-      <P style={{ backgroundColor: 'green' }}>7</P>
-      <P style={{ backgroundColor: 'green' }}>8</P>
-    </Container>
+    <Desc> - Lines packed to the center of the container</Desc>
 
-    <h6>center</h6>
-
-    <Container style={{ alignContent: 'center' }}>
+    <Container style={{ alignContent: 'center', flexWrap: 'wrap' }}>
       <P style={{ backgroundColor: 'blue' }}>1</P>
       <P style={{ backgroundColor: 'blue' }}>2</P>
       <P style={{ backgroundColor: 'blue' }}>3</P>
@@ -74,9 +65,29 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'blue' }}>8</P>
     </Container>
 
-    <h6>space-between</h6>
+    <Heading>flex-end</Heading>
 
-    <Container style={{ alignContent: 'space-between' }}>
+    <Desc> - Lines packed to the end of the container</Desc>
+
+    <Container style={{ alignContent: 'flex-end', flexWrap: 'wrap' }}>
+      <P style={{ backgroundColor: 'green' }}>1</P>
+      <P style={{ backgroundColor: 'green' }}>2</P>
+      <P style={{ backgroundColor: 'green' }}>3</P>
+      <P style={{ backgroundColor: 'green' }}>4</P>
+      <P style={{ backgroundColor: 'green' }}>5</P>
+      <P style={{ backgroundColor: 'green' }}>6</P>
+      <P style={{ backgroundColor: 'green' }}>7</P>
+      <P style={{ backgroundColor: 'green' }}>8</P>
+    </Container>
+
+    <Heading>space-between</Heading>
+
+    <Desc>
+      - Lines evenly distributed; the first line is at the start of the
+      container while the last one is at the end
+    </Desc>
+
+    <Container style={{ alignContent: 'space-between', flexWrap: 'wrap' }}>
       <P style={{ backgroundColor: 'tomato' }}>1</P>
       <P style={{ backgroundColor: 'tomato' }}>2</P>
       <P style={{ backgroundColor: 'tomato' }}>3</P>
@@ -87,9 +98,11 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'tomato' }}>8</P>
     </Container>
 
-    <h6>space-around</h6>
+    <Heading>space-around</Heading>
 
-    <Container style={{ alignContent: 'space-around' }}>
+    <Desc> - Lines evenly distributed with equal space around each line</Desc>
+
+    <Container style={{ alignContent: 'space-around', flexWrap: 'wrap' }}>
       <P style={{ backgroundColor: 'deepskyblue' }}>1</P>
       <P style={{ backgroundColor: 'deepskyblue' }}>2</P>
       <P style={{ backgroundColor: 'deepskyblue' }}>3</P>
@@ -100,9 +113,13 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'deepskyblue' }}>8</P>
     </Container>
 
-    <h6>space-evenly</h6>
+    <Heading>space-evenly</Heading>
 
-    <Container style={{ alignContent: 'space-evenly' }}>
+    <Desc>
+      - Spacing between any two items (and the space to the edges) is equal
+    </Desc>
+
+    <Container style={{ alignContent: 'space-evenly', flexWrap: 'wrap' }}>
       <P style={{ backgroundColor: 'gold' }}>1</P>
       <P style={{ backgroundColor: 'gold' }}>2</P>
       <P style={{ backgroundColor: 'gold' }}>3</P>
@@ -113,11 +130,35 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'gold' }}>8</P>
     </Container>
 
-    <h2>flex-direction: column</h2>
+    {/* ==================================================================== */}
 
-    <h6>flex-start</h6>
+    <br />
+    <hr />
 
-    <ContainerCol style={{ alignContent: 'flex-start' }}>
+    <Code>flex-direction: row</Code>
+    <Code>flex-wrap: wrap</Code>
+    <Code>height: 200px</Code>
+
+    <Heading>stretch</Heading>
+
+    <Container
+      style={{ alignContent: 'stretch', flexWrap: 'wrap', height: '200px' }}
+    >
+      <P style={{ backgroundColor: 'yellow' }}>1</P>
+      <P style={{ backgroundColor: 'yellow' }}>2</P>
+      <P style={{ backgroundColor: 'yellow' }}>3</P>
+      <P style={{ backgroundColor: 'yellow' }}>4</P>
+      <P style={{ backgroundColor: 'yellow' }}>5</P>
+      <P style={{ backgroundColor: 'yellow' }}>6</P>
+      <P style={{ backgroundColor: 'yellow' }}>7</P>
+      <P style={{ backgroundColor: 'yellow' }}>8</P>
+    </Container>
+
+    <Heading>flex-start</Heading>
+
+    <Container
+      style={{ alignContent: 'flex-start', flexWrap: 'wrap', height: '200px' }}
+    >
       <P style={{ backgroundColor: 'red' }}>1</P>
       <P style={{ backgroundColor: 'red' }}>2</P>
       <P style={{ backgroundColor: 'red' }}>3</P>
@@ -126,24 +167,13 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'red' }}>6</P>
       <P style={{ backgroundColor: 'red' }}>7</P>
       <P style={{ backgroundColor: 'red' }}>8</P>
-    </ContainerCol>
+    </Container>
 
-    <h6>flex-end</h6>
+    <Heading>center</Heading>
 
-    <ContainerCol style={{ alignContent: 'flex-end' }}>
-      <P style={{ backgroundColor: 'green' }}>1</P>
-      <P style={{ backgroundColor: 'green' }}>2</P>
-      <P style={{ backgroundColor: 'green' }}>3</P>
-      <P style={{ backgroundColor: 'green' }}>4</P>
-      <P style={{ backgroundColor: 'green' }}>5</P>
-      <P style={{ backgroundColor: 'green' }}>6</P>
-      <P style={{ backgroundColor: 'green' }}>7</P>
-      <P style={{ backgroundColor: 'green' }}>8</P>
-    </ContainerCol>
-
-    <h6>center</h6>
-
-    <ContainerCol style={{ alignContent: 'center' }}>
+    <Container
+      style={{ alignContent: 'center', flexWrap: 'wrap', height: '200px' }}
+    >
       <P style={{ backgroundColor: 'blue' }}>1</P>
       <P style={{ backgroundColor: 'blue' }}>2</P>
       <P style={{ backgroundColor: 'blue' }}>3</P>
@@ -152,11 +182,32 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'blue' }}>6</P>
       <P style={{ backgroundColor: 'blue' }}>7</P>
       <P style={{ backgroundColor: 'blue' }}>8</P>
-    </ContainerCol>
+    </Container>
 
-    <h6>space-between</h6>
+    <Heading>flex-end</Heading>
 
-    <ContainerCol style={{ alignContent: 'space-between' }}>
+    <Container
+      style={{ alignContent: 'flex-end', flexWrap: 'wrap', height: '200px' }}
+    >
+      <P style={{ backgroundColor: 'green' }}>1</P>
+      <P style={{ backgroundColor: 'green' }}>2</P>
+      <P style={{ backgroundColor: 'green' }}>3</P>
+      <P style={{ backgroundColor: 'green' }}>4</P>
+      <P style={{ backgroundColor: 'green' }}>5</P>
+      <P style={{ backgroundColor: 'green' }}>6</P>
+      <P style={{ backgroundColor: 'green' }}>7</P>
+      <P style={{ backgroundColor: 'green' }}>8</P>
+    </Container>
+
+    <Heading>space-between</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-between',
+        flexWrap: 'wrap',
+        height: '200px'
+      }}
+    >
       <P style={{ backgroundColor: 'tomato' }}>1</P>
       <P style={{ backgroundColor: 'tomato' }}>2</P>
       <P style={{ backgroundColor: 'tomato' }}>3</P>
@@ -165,11 +216,17 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'tomato' }}>6</P>
       <P style={{ backgroundColor: 'tomato' }}>7</P>
       <P style={{ backgroundColor: 'tomato' }}>8</P>
-    </ContainerCol>
+    </Container>
 
-    <h6>space-around</h6>
+    <Heading>space-around</Heading>
 
-    <ContainerCol style={{ alignContent: 'space-around' }}>
+    <Container
+      style={{
+        alignContent: 'space-around',
+        flexWrap: 'wrap',
+        height: '200px'
+      }}
+    >
       <P style={{ backgroundColor: 'deepskyblue' }}>1</P>
       <P style={{ backgroundColor: 'deepskyblue' }}>2</P>
       <P style={{ backgroundColor: 'deepskyblue' }}>3</P>
@@ -178,11 +235,17 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'deepskyblue' }}>6</P>
       <P style={{ backgroundColor: 'deepskyblue' }}>7</P>
       <P style={{ backgroundColor: 'deepskyblue' }}>8</P>
-    </ContainerCol>
+    </Container>
 
-    <h6>space-evenly</h6>
+    <Heading>space-evenly</Heading>
 
-    <ContainerCol style={{ alignContent: 'space-evenly' }}>
+    <Container
+      style={{
+        alignContent: 'space-evenly',
+        flexWrap: 'wrap',
+        height: '200px'
+      }}
+    >
       <P style={{ backgroundColor: 'gold' }}>1</P>
       <P style={{ backgroundColor: 'gold' }}>2</P>
       <P style={{ backgroundColor: 'gold' }}>3</P>
@@ -191,7 +254,425 @@ const AlignContent = () => (
       <P style={{ backgroundColor: 'gold' }}>6</P>
       <P style={{ backgroundColor: 'gold' }}>7</P>
       <P style={{ backgroundColor: 'gold' }}>8</P>
-    </ContainerCol>
+    </Container>
+
+    {/* ==================================================================== */}
+
+    <br />
+    <hr />
+
+    <Code>flex-direction: row</Code>
+    <Code>flex-wrap: wrap</Code>
+    <Code>height: 200px</Code>
+    <pre>items</pre>
+    <Code>width: 200px</Code>
+
+    <Heading>stretch</Heading>
+
+    <Container
+      style={{ alignContent: 'stretch', flexWrap: 'wrap', height: '200px' }}
+    >
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'yellow', width: '200px' }}>8</P>
+    </Container>
+
+    <Heading>flex-start</Heading>
+
+    <Container
+      style={{ alignContent: 'flex-start', flexWrap: 'wrap', height: '200px' }}
+    >
+      <P style={{ backgroundColor: 'red', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'red', width: '200px' }}>8</P>
+    </Container>
+
+    <Heading>center</Heading>
+
+    <Container
+      style={{ alignContent: 'center', flexWrap: 'wrap', height: '200px' }}
+    >
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'blue', width: '200px' }}>8</P>
+    </Container>
+
+    <Heading>flex-end</Heading>
+
+    <Container
+      style={{ alignContent: 'flex-end', flexWrap: 'wrap', height: '200px' }}
+    >
+      <P style={{ backgroundColor: 'green', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'green', width: '200px' }}>8</P>
+    </Container>
+
+    <Heading>space-between</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-between',
+        flexWrap: 'wrap',
+        height: '200px'
+      }}
+    >
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'tomato', width: '200px' }}>8</P>
+    </Container>
+
+    <Heading>space-around</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-around',
+        flexWrap: 'wrap',
+        height: '200px'
+      }}
+    >
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'deepskyblue', width: '200px' }}>8</P>
+    </Container>
+
+    <Heading>space-evenly</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-evenly',
+        flexWrap: 'wrap',
+        height: '200px'
+      }}
+    >
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>1</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>2</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>3</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>4</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>5</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>6</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>7</P>
+      <P style={{ backgroundColor: 'gold', width: '200px' }}>8</P>
+    </Container>
+
+    {/* ==================================================================== */}
+
+    <br />
+    <hr />
+
+    <Code>flex-direction: column</Code>
+    <Code>flex-wrap: wrap</Code>
+
+    <Heading>stretch</Heading>
+
+    <Container
+      style={{
+        alignContent: 'stretch',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'yellow' }}>1</P>
+      <P style={{ backgroundColor: 'yellow' }}>2</P>
+      <P style={{ backgroundColor: 'yellow' }}>3</P>
+      <P style={{ backgroundColor: 'yellow' }}>4</P>
+      <P style={{ backgroundColor: 'yellow' }}>5</P>
+      <P style={{ backgroundColor: 'yellow' }}>6</P>
+      <P style={{ backgroundColor: 'yellow' }}>7</P>
+      <P style={{ backgroundColor: 'yellow' }}>8</P>
+    </Container>
+
+    <Heading>flex-start</Heading>
+
+    <Container
+      style={{
+        alignContent: 'flex-start',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'red' }}>1</P>
+      <P style={{ backgroundColor: 'red' }}>2</P>
+      <P style={{ backgroundColor: 'red' }}>3</P>
+      <P style={{ backgroundColor: 'red' }}>4</P>
+      <P style={{ backgroundColor: 'red' }}>5</P>
+      <P style={{ backgroundColor: 'red' }}>6</P>
+      <P style={{ backgroundColor: 'red' }}>7</P>
+      <P style={{ backgroundColor: 'red' }}>8</P>
+    </Container>
+
+    <Heading>center</Heading>
+
+    <Container
+      style={{
+        alignContent: 'center',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'blue' }}>1</P>
+      <P style={{ backgroundColor: 'blue' }}>2</P>
+      <P style={{ backgroundColor: 'blue' }}>3</P>
+      <P style={{ backgroundColor: 'blue' }}>4</P>
+      <P style={{ backgroundColor: 'blue' }}>5</P>
+      <P style={{ backgroundColor: 'blue' }}>6</P>
+      <P style={{ backgroundColor: 'blue' }}>7</P>
+      <P style={{ backgroundColor: 'blue' }}>8</P>
+    </Container>
+
+    <Heading>flex-end</Heading>
+
+    <Container
+      style={{
+        alignContent: 'flex-end',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'green' }}>1</P>
+      <P style={{ backgroundColor: 'green' }}>2</P>
+      <P style={{ backgroundColor: 'green' }}>3</P>
+      <P style={{ backgroundColor: 'green' }}>4</P>
+      <P style={{ backgroundColor: 'green' }}>5</P>
+      <P style={{ backgroundColor: 'green' }}>6</P>
+      <P style={{ backgroundColor: 'green' }}>7</P>
+      <P style={{ backgroundColor: 'green' }}>8</P>
+    </Container>
+
+    <Heading>space-between</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-between',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'tomato' }}>1</P>
+      <P style={{ backgroundColor: 'tomato' }}>2</P>
+      <P style={{ backgroundColor: 'tomato' }}>3</P>
+      <P style={{ backgroundColor: 'tomato' }}>4</P>
+      <P style={{ backgroundColor: 'tomato' }}>5</P>
+      <P style={{ backgroundColor: 'tomato' }}>6</P>
+      <P style={{ backgroundColor: 'tomato' }}>7</P>
+      <P style={{ backgroundColor: 'tomato' }}>8</P>
+    </Container>
+
+    <Heading>space-around</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-around',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'deepskyblue' }}>1</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>2</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>3</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>4</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>5</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>6</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>7</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>8</P>
+    </Container>
+
+    <Heading>space-evenly</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-evenly',
+        flexWrap: 'wrap',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'gold' }}>1</P>
+      <P style={{ backgroundColor: 'gold' }}>2</P>
+      <P style={{ backgroundColor: 'gold' }}>3</P>
+      <P style={{ backgroundColor: 'gold' }}>4</P>
+      <P style={{ backgroundColor: 'gold' }}>5</P>
+      <P style={{ backgroundColor: 'gold' }}>6</P>
+      <P style={{ backgroundColor: 'gold' }}>7</P>
+      <P style={{ backgroundColor: 'gold' }}>8</P>
+    </Container>
+
+    {/* ==================================================================== */}
+
+    <br />
+    <hr />
+
+    <Code>flex-direction: column</Code>
+    <Code>flex-wrap: wrap</Code>
+    <Code>height: 500px</Code>
+
+    <Heading>stretch</Heading>
+
+    <Container
+      style={{
+        alignContent: 'stretch',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'yellow' }}>1</P>
+      <P style={{ backgroundColor: 'yellow' }}>2</P>
+      <P style={{ backgroundColor: 'yellow' }}>3</P>
+      <P style={{ backgroundColor: 'yellow' }}>4</P>
+      <P style={{ backgroundColor: 'yellow' }}>5</P>
+      <P style={{ backgroundColor: 'yellow' }}>6</P>
+      <P style={{ backgroundColor: 'yellow' }}>7</P>
+      <P style={{ backgroundColor: 'yellow' }}>8</P>
+    </Container>
+
+    <Heading>flex-start</Heading>
+
+    <Container
+      style={{
+        alignContent: 'flex-start',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'red' }}>1</P>
+      <P style={{ backgroundColor: 'red' }}>2</P>
+      <P style={{ backgroundColor: 'red' }}>3</P>
+      <P style={{ backgroundColor: 'red' }}>4</P>
+      <P style={{ backgroundColor: 'red' }}>5</P>
+      <P style={{ backgroundColor: 'red' }}>6</P>
+      <P style={{ backgroundColor: 'red' }}>7</P>
+      <P style={{ backgroundColor: 'red' }}>8</P>
+    </Container>
+
+    <Heading>center</Heading>
+
+    <Container
+      style={{
+        alignContent: 'center',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'blue' }}>1</P>
+      <P style={{ backgroundColor: 'blue' }}>2</P>
+      <P style={{ backgroundColor: 'blue' }}>3</P>
+      <P style={{ backgroundColor: 'blue' }}>4</P>
+      <P style={{ backgroundColor: 'blue' }}>5</P>
+      <P style={{ backgroundColor: 'blue' }}>6</P>
+      <P style={{ backgroundColor: 'blue' }}>7</P>
+      <P style={{ backgroundColor: 'blue' }}>8</P>
+    </Container>
+
+    <Heading>flex-end</Heading>
+
+    <Container
+      style={{
+        alignContent: 'flex-end',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'green' }}>1</P>
+      <P style={{ backgroundColor: 'green' }}>2</P>
+      <P style={{ backgroundColor: 'green' }}>3</P>
+      <P style={{ backgroundColor: 'green' }}>4</P>
+      <P style={{ backgroundColor: 'green' }}>5</P>
+      <P style={{ backgroundColor: 'green' }}>6</P>
+      <P style={{ backgroundColor: 'green' }}>7</P>
+      <P style={{ backgroundColor: 'green' }}>8</P>
+    </Container>
+
+    <Heading>space-between</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-between',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'tomato' }}>1</P>
+      <P style={{ backgroundColor: 'tomato' }}>2</P>
+      <P style={{ backgroundColor: 'tomato' }}>3</P>
+      <P style={{ backgroundColor: 'tomato' }}>4</P>
+      <P style={{ backgroundColor: 'tomato' }}>5</P>
+      <P style={{ backgroundColor: 'tomato' }}>6</P>
+      <P style={{ backgroundColor: 'tomato' }}>7</P>
+      <P style={{ backgroundColor: 'tomato' }}>8</P>
+    </Container>
+
+    <Heading>space-around</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-around',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'deepskyblue' }}>1</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>2</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>3</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>4</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>5</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>6</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>7</P>
+      <P style={{ backgroundColor: 'deepskyblue' }}>8</P>
+    </Container>
+
+    <Heading>space-evenly</Heading>
+
+    <Container
+      style={{
+        alignContent: 'space-evenly',
+        flexWrap: 'wrap',
+        height: '500px',
+        flexDirection: 'column'
+      }}
+    >
+      <P style={{ backgroundColor: 'gold' }}>1</P>
+      <P style={{ backgroundColor: 'gold' }}>2</P>
+      <P style={{ backgroundColor: 'gold' }}>3</P>
+      <P style={{ backgroundColor: 'gold' }}>4</P>
+      <P style={{ backgroundColor: 'gold' }}>5</P>
+      <P style={{ backgroundColor: 'gold' }}>6</P>
+      <P style={{ backgroundColor: 'gold' }}>7</P>
+      <P style={{ backgroundColor: 'gold' }}>8</P>
+    </Container>
   </>
 );
 
@@ -200,25 +681,27 @@ export default AlignContent;
 const Container = styled.div`
   display: flex;
   border: 1px dashed silver;
-  height: 100px;
 `;
 
-const ContainerCol = styled.div`
-  display: flex;
-  flex-direction: column;
-  border: 1px dashed silver;
-  height: 600px;
+const Code = styled.pre`
+  font-weight: 800;
+  color: red;
+`;
+
+const Heading = styled.p`
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 1rem 0;
+`;
+
+const Desc = styled.span`
+  font-size: 0.8rem;
 `;
 
 const P = styled.p`
-  padding: 5px;
-  width: 50px;
-  height: 50px;
-  margin: 0;
-  line-height: 40px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
   text-align: center;
+  color: lightgray;
+  font-weight: bold;
   border: 1px dashed silver;
 `;

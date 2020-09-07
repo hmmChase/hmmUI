@@ -1,23 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-/*
-
-flex-direction
-
-The direction items are placed in the container
-Establishes the main-axis
-
-row - Items are placed the same as the text direction (default)
-row-reverse - Items are placed opposite to the text direction
-column - Items are placed top to bottom
-column-reverse - Items are placed bottom to top
-
-*/
-
 export const FlexDirection = () => (
   <>
-    <h6>row</h6>
+    <h2>The direction items are placed in the container</h2>
+    <h3>Establishes the main-axis</h3>
+
+    <Heading>row</Heading>
+
+    <Desc> - Items are placed the same as the text direction (default)</Desc>
 
     <Container style={{ flexDirection: 'row' }}>
       <P style={{ backgroundColor: 'red' }}>one</P>
@@ -26,7 +17,9 @@ export const FlexDirection = () => (
       <P style={{ backgroundColor: 'yellow' }}>four</P>
     </Container>
 
-    <h6>row-reverse</h6>
+    <Heading>row-reverse</Heading>
+
+    <Desc> - Items are placed opposite to the text direction</Desc>
 
     <Container style={{ flexDirection: 'row-reverse' }}>
       <P style={{ backgroundColor: 'red' }}>one</P>
@@ -35,7 +28,9 @@ export const FlexDirection = () => (
       <P style={{ backgroundColor: 'yellow' }}>four</P>
     </Container>
 
-    <h6>column</h6>
+    <Heading>column</Heading>
+
+    <Desc> - Items are placed top to bottom</Desc>
 
     <Container style={{ flexDirection: 'column' }}>
       <P style={{ backgroundColor: 'red' }}>one</P>
@@ -44,7 +39,9 @@ export const FlexDirection = () => (
       <P style={{ backgroundColor: 'yellow' }}>four</P>
     </Container>
 
-    <h6>column-reverse</h6>
+    <Heading>column-reverse</Heading>
+
+    <Desc> - Items are placed bottom to top</Desc>
 
     <Container style={{ flexDirection: 'column-reverse' }}>
       <P style={{ backgroundColor: 'red' }}>one</P>
@@ -62,15 +59,25 @@ const Container = styled.div`
   border: 1px dashed silver;
 `;
 
+const Code = styled.pre`
+  font-weight: 800;
+  color: red;
+`;
+
+const Heading = styled.p`
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 1rem 0;
+`;
+
+const Desc = styled.span`
+  font-size: 0.8rem;
+`;
+
 const P = styled.p`
-  padding: 5px;
-  width: 50px;
-  height: 50px;
-  margin: 10px;
-  line-height: 40px;
-  color: white;
-  font-weight: bold;
-  font-size: 1em;
   text-align: center;
+  color: lightgray;
+  font-weight: bold;
   border: 1px dashed silver;
 `;
