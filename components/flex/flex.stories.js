@@ -1,36 +1,18 @@
 import React from 'react';
-import {
-  Flex0,
-  Flex1,
-  Flex2,
-  Flex3,
-  FlexButton,
-  FlexStackRow,
-  FlexStackCol
-} from './flex';
+import FlexDirection from './FlexDirection';
+import FlexWrap from './FlexWrap';
+import JustifyContent from './JustifyContent';
+import AlignItems from './AlignItems';
+import AlignContent from './AlignContent';
 
 export default { title: 'components|Flex' };
 
-export const flex = () => (
-  <>
-    <Flex0 />
-    <br />
-    <Flex1 />
-    <br />
-    <Flex2 />
-    <br />
-    <Flex3 />
-    <br />
-  </>
-);
+export const flexDirection = () => <FlexDirection />;
 
-export const flexButton = () => <FlexButton />;
+export const flexWrap = () => <FlexWrap />;
 
-export const flexStack = () => (
-  <>
-    <FlexStackRow />
-    <br />
-    <br />
-    <FlexStackCol />
-  </>
-);
+export const justifyContent = () => <JustifyContent />;
+
+export const alignItems = () => <AlignItems />;
+
+export const alignContent = () => <AlignContent />;

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as sc from './flex.style';
+import * as sc from './flex2.style';
 
 const Items = () => (
   <>
