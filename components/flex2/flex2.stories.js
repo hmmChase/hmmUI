@@ -8,6 +8,9 @@ import {
   FlexStackRow,
   FlexStackCol
 } from './flex2';
+import FlexCorners from '../flex2/FlexCorners';
+import QuestionCard from './QuestionCard';
+import CommentCard from './CommentCard';
 
 export default { title: 'components|Flex2' };
 
@@ -34,3 +37,9 @@ export const flexStack = () => (
     <FlexStackCol />
   </>
 );
+
+export const flexCorners = () => <FlexCorners />;
+
+export const questionCard = () => <QuestionCard />;
+
+export const commentCard = () => <CommentCard />;
