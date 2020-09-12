@@ -11,6 +11,7 @@ import {
 import FlexCorners from '../flex2/FlexCorners';
 import QuestionCard from './QuestionCard';
 import CommentCard from './CommentCard';
+import AnswerCard from './AnswerCard';
 
 export default { title: 'components|Flex2' };
 
@@ -43,3 +44,5 @@ export const flexCorners = () => <FlexCorners />;
 export const questionCard = () => <QuestionCard />;
 
 export const commentCard = () => <CommentCard />;
+
+export const answerCard = () => <AnswerCard />;

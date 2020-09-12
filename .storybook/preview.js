@@ -46,10 +46,11 @@ addParameters({
 // addDecorator(withA11y);
 
 addDecorator(story => (
-  <div style={{ padding: '1rem' }}>
+  <div style={{ height: '100%', padding: '1rem' }}>
     {/* <MockedProvider> */}
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+
       {story()}
     </ThemeProvider>
     {/* </MockedProvider> */}

@@ -1,51 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const QuestionCard = () => (
+const AnswerCard = () => (
   <Container>
-    <Row>
-      <Group>
-        <PaddedTopBottom>Author</PaddedTopBottom>
+    <span>Fav</span>
 
-        <PaddedTopBottom>Date</PaddedTopBottom>
-      </Group>
+    <GroupCol>
+      <Row>
+        <Group>
+          <PaddedTopBottom>Author</PaddedTopBottom>
 
-      <GroupTopRight>
-        <Fav>Fav</Fav>
+          <PaddedTopBottom>Time</PaddedTopBottom>
+
+          <PaddedTopBottom>Date</PaddedTopBottom>
+        </Group>
 
         <Ellipsis style={{ backgroundColor: 'olive' }}>...</Ellipsis>
-      </GroupTopRight>
-    </Row>
+      </Row>
 
-    <Row>
-      <Title>
+      <span>
         Magnam fuga officia in qui et at fugiat atque enim. Quaerat dolorem
         libero qui illum inventore est. Assumenda officiis aliquid praesentium
         saepe blanditiis. Aut et impedit. Consequuntur id quis placeat itaque
         qui nam dolor officiis.
-      </Title>
-    </Row>
-
-    <Row>
-      <Group>
-        <span>AnswerCount</span>
-
-        <span>CommentCount</span>
-      </Group>
-
-      <ViewLink>View Thread</ViewLink>
-    </Row>
+      </span>
+    </GroupCol>
   </Container>
 );
 
-export default React.memo(QuestionCard);
+export default React.memo(AnswerCard);
 
 const Container = styled.div`
   border: 1px dashed black;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   padding: 0 0 1rem 1rem;
+  gap: 1rem;
 
   * * {
     /* border: 1px dashed red; */
@@ -63,16 +53,9 @@ const Group = styled.div`
   gap: 1rem;
 `;
 
-const GroupTopRight = styled.div`
+const GroupCol = styled.div`
   display: flex;
-`;
-
-const Title = styled.span`
-  margin-bottom: 1rem;
-`;
-
-const Fav = styled.span`
-  margin: auto 1rem auto 0;
+  flex-direction: column;
 `;
 
 const Ellipsis = styled.span`
@@ -82,8 +65,4 @@ const Ellipsis = styled.span`
 
 const PaddedTopBottom = styled.span`
   padding: 1rem 0;
-`;
-
-const ViewLink = styled.span`
-  margin-right: 1rem;
 `;

@@ -36,6 +36,7 @@ export default createGlobalStyle`
 
   html {
     box-sizing: border-box;
+    height: 100%;
   }
 
   *, *:before, *:after {
@@ -48,6 +49,7 @@ export default createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    height: 100%;
 
     ${'' /* overflow-y: auto; */}
     ${'' /* overflow-x: hidden; */}
@@ -58,5 +60,9 @@ export default createGlobalStyle`
     ${'' /* -webkit-tap-highlight-color: transparent; */}
     ${'' /* -webkit-overflow-scrolling: touch; */}
 
+  }
+
+  #root {
+    height: 100%;
   }
 `;
