@@ -23,7 +23,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   /* border: 1px dashed silver; */
-  background-color: black;
+  /* background-color: black; */
 
   /* z-index: 10; */
 `;
@@ -34,7 +34,7 @@ export const Center = styled.div`
 `;
 
 export const Middle = styled.div`
-  background-color: white;
+  background-color: black;
   position: absolute;
   bottom: -50px;
   left: -50px;
@@ -44,7 +44,7 @@ export const Middle = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
 
 export const Circle1 = styled.div`
@@ -58,7 +58,7 @@ export const Circle1 = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
 
 export const Circle2 = styled.div`
@@ -72,7 +72,7 @@ export const Circle2 = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
 
 export const Circle3 = styled.div`
@@ -86,7 +86,7 @@ export const Circle3 = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
 
 export const Circle4 = styled.div`
@@ -99,7 +99,7 @@ export const Circle4 = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
 
 export const Circle5 = styled.div`
@@ -113,7 +113,7 @@ export const Circle5 = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
 
 export const Circle6 = styled.div`
@@ -127,5 +127,5 @@ export const Circle6 = styled.div`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid white;
 `;
